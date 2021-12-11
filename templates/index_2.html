@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='styles/style.css')}}">
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='styles/style_2.css')}}">
     <title>GeoMap</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />    
     
@@ -12,9 +12,11 @@
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="icon" href="/static/styles/earth.png">
 
     <style>
-      #map {position: absolute; top: 100px; bottom: 100px; left: 50px; right: 800px;}
+      #map {position: absolute; top: 200px; bottom: 100px; left: 100px; right: 900px;}
+      #map {z-index: 100;}
     </style>
   
     <div id="map"></div>
@@ -23,35 +25,35 @@
   </head>
 
 
-
   <body>
-    <section class="showcase">
+    <section class="geoMapShowcase">
   
       <header>
         <h2 class="logo">GEOMAP</h2>
         <div class="toggle"></div>
       </header>
-  
-      <!--<video autoplay muted loop id="myVideo">
-        <source src="/static/styles/water.mp4" type="video/mp4">
-      </video>-->
 
+      <div class="tabs">   
+             
+        <input type="radio" id="GeoMap" name="tabs">
+        <label for="GeoMap">GeoMap</label>
+        <div class="tab">
+        
+        <h2>GeoMap</h2>
+          <p>You can access the map to the right. Enter a city's name, and great ready to explore!</p>
+          
+          <!--<input type="text" id="lat" name="lat">
+          <input type="text" id="long" name="long">-->
+          <input type="text" id="userCity" name="userCity">
+          <button type="button" id="go" onclick="userLatLong();">Go!</button>
       
-  
-      <div class="overlay"></div>
-  
-      <div class="text">
-        <h2>Use GeoMap!</h2>
-        <p>Here is where you can explore new places. Just enter a city, and get ready to see new destinations!</p>
-      </div>
-  
+        
     </section>
   
     <div class="menu">
       <ul>
         <li><a href="http://127.0.0.1:5000/">Home</a></li>
         <li><a href="http://127.0.0.1:5000/geomap/">GeoMap</a></li>
-  
       </ul>
     </div>
   
@@ -63,41 +65,8 @@
         sideSpace.classList.toggle('active');
       });
     </script>
-  
-
 
 </body>
-
-<div class="tabs">  
-  
-  <input type="radio" id="Home" name="tabs" checked="checked">
-  <label for="Home">Home</label>
-  <div class="tab">
-    <h2>Home</h2>
-    <h3>Welcome to GeoMap!</h3>
-    <p>While travelling has been difficult over the past few years, it's still possible to view new places that you may not have explored before. GeoMap is a tool for you to explore the unknown: Bon Voyage!</p>
-  </div>
-
-  <input type="radio" id="GeoMap" name="tabs">
-  <label for="GeoMap">GeoMap</label>
-  <div class="tab">
-  
-  <h2>GeoMap</h2>
-    <p>You can access the map to the right. Enter a city's name, and great ready to explore!</p>
-    
-    <!--<input type="text" id="lat" name="lat">
-    <input type="text" id="long" name="long">-->
-    <input type="text" id="userCity" name="userCity">
-    <button type="button" id="go" onclick="userLatLong();">Go!</button>
-
-  </div>
-  <input type="radio" id="Dashboard" name="tabs">
-  <label for="Dashboard">Dashboard</label>
-  <div class="tab">
-    <h2>Dashboard</h2>
-    <p>Your dashboard. All of your statistics and information in one place.</p>
-  </div>
-</div>
 
 </body>
 </html>

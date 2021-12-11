@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+body{
+    background-color: white;
+}
+.body{
+    overflow: hidden;
+}
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-right: 25px;
+    margin-left: 1100px;
+    margin-bottom: 100px;
+    padding: 100px;
+}
+.tabs input[type="radio"]{ 
+    display: none;
+}
+.tabs label{
+    padding: 25px;
+    background: lightgray;
+    font-weight: bold;
+    order: 1;
+}
+.tabs .tab{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: lightyellow;
+    order: 2;
+    display: none;
+}
+.tabs .tab h2{
+    font-size: 5em;
+}
+.tabs input[type="radio"]:checked + label + .tab{
+    display: block;
+}
+.tabs input[type="radio"]:checked + label{
+    background-color: limegreen
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Readex Pro', sans-serif;
+}
+.geoMapShowcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    z-index: 2;
+    transition: 0.35s;
+}
+
+.geoMapShowcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.toggle{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background: url(/static/styles/earth.png);
+    background-repeat: no-repeat;
+    position: center;
+    background-size: 75px;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+.toggle.active{
+    background: url(/static/styles/earth.png);
+    background-repeat: no-repeat;
+    position: center;
+    background-size: 75px;
+    background-position: center;
+}
+
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:steelblue;
+    mix-blend-mode: overlay; 
+}
+
+.text{
+    position: relative;
+    z-index: 10;
+}
+
+.text h2{
+    font-size: 5em;
+    font-weight: 500;
+    line-height: 1em;
+}
+
+.text h3{
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.text p{
+    font-size: 1em;
+    margin: 30px 0;
+    max-width: 500px;
+    letter-spacing: 1.5px;
+}
+
+.geoMapShowcase.active{
+    right: 200px;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul{
+    position:relative;
+    list-style: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+}
+.menu ul li a:hover{
+    color: steelblue;
+}
