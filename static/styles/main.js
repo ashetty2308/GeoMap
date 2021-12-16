@@ -48,4 +48,3 @@ function destroyMap(map){
 }
 
 // wikipedia api --> https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Austin&format=json
-
