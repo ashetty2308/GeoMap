@@ -1,6 +1,6 @@
 var count = 0;
 var clearClicked = false;
-var map = new L.map('map').setView([0, 0], 12);
+var map = new L.map('map').setView([0, 0], 14);
 var marker = new L.map('marker').setView([0,0]);
 
 
@@ -19,7 +19,7 @@ function userLatLong(){
     city_long = obj[0]["lon"];
 
     if(count%2==1){
-      map = new L.map('map').setView([city_lat, city_long], 13);
+      map = new L.map('map').setView([city_lat, city_long], 14);
       marker = L.marker([city_lat, city_long], {title:userCity, fillOpacity: 0.5}).addTo(map);
       marker.bindPopup(userCity).openPopup();
 

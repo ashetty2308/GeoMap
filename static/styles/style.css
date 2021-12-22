@@ -6,7 +6,6 @@ body{
     overflow: hidden;
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -65,7 +64,6 @@ body{
     background-position: center;
 }
 
-
 .showcase video{
     position: absolute;
     top: 0;
@@ -74,7 +72,6 @@ body{
     height: 100%;
     opacity: 0.8;
     object-fit: cover;
-
 }
 
 .overlay{

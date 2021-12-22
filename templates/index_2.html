@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,21 +32,38 @@
   <!---->
 </head>
 
+
 <body>
-  <section class="showcase">
-    <div class="overlay"></div>
-  </section>
+
+
   <div class="menu">
     <ul>
-      <li><a href="http://127.0.0.1:5000/">Home</a></li>
-      <li><a href="http://127.0.0.1:5000/geomap/">GeoMap</a></li>
-
+      <a href="http://127.0.0.1:5000/">
+        <div class="toggle"></div>    
+      </a>
     </ul>
   </div>
+
+
+
+
+
+
   <div class="search">
     <input id="userCity" class="search-text" type="text" name="userCity" placeholder="Type the city of interest...">
     <a class="search-button" href="#" onclick="userLatLong();">
       <i class="fas fa-map-pin"></i>
     </a>
   </div>
-  
+
+  <script>
+    const checkSideBar = document.querySelector('.toggle');
+    const sideSpace = document.querySelector('.showcase');
+    checkSideBar.addEventListener('click', function(){
+      checkSideBar.classList.toggle('active');
+      sideSpace.classList.toggle('active');
+    });
+  </script>
+
+
+
