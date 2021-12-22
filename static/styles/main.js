@@ -10,7 +10,7 @@ function userLatLong(){
 
   var userCity = document.getElementById("userCity").value;
   let url = "http://api.openweathermap.org/geo/1.0/direct?q="+userCity+"&limit=5&appid=7e3eac24249fda8fc39ac0f291163bb2";
-
+  let url_2 = " https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="+userCity+"&origin=*";
   fetch(url).then(function (response) {
      return response.json();    
   }).then(function (obj){
@@ -40,11 +40,21 @@ function userLatLong(){
       destroyMap(map);
     }
   })
+  fetch(url_2).then(function (response) {
+    return response.json();    
+ }).then(function (obj_2){
+
+  var query = obj_2["query"];
+  console.log(query);
+  //snippet = query{"search"}[0]
+
+
+ })
+
+
 }
 
 function destroyMap(map){
   map.remove();
   userLatLong();
 }
-
-// wikipedia api --> https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Austin&format=json

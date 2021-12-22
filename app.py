@@ -8,7 +8,7 @@ def index():
     return render_template("index.html")
  
 @app.route("/geomap/")
-def who():
+def geomap():
     return render_template("index_2.html")
   
 if __name__ == "__main__":
