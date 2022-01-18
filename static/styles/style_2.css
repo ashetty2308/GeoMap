@@ -1,6 +1,6 @@
-
-
-
+ 
+ 
+ 
 .body{
     margin: 0;
     padding:0;
@@ -43,22 +43,25 @@
     width: 500px;
     padding: 0 6px;
 }
-
+ 
 .menu{
     position: absolute;
-    top: -390px;
-    right: 50px;
-    width: 200px;
-    height: 100%;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    width: 10vw;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .toggle{
-    position: relative;
-    width: 75px;
-    height: 75px;
+    position: absolute;
+    top: -20vh;
+    right: 1vw;
+    width: 10vw;
+    height: 10vh;  
     background: url(/static/styles/earth.png);
     background-repeat: no-repeat;
     position: center;
@@ -82,7 +85,7 @@
     justify-content: space-between;
     z-index: -10;
 }
-
+ 
 .toggle.active{
     background: url(/static/styles/earth.png);
     background-repeat: no-repeat;
@@ -90,7 +93,7 @@
     background-size: 75px;
     background-position: center;
 }
-
+ 
 .logo{
     text-transform: uppercase;
     cursor: pointer;
@@ -99,7 +102,7 @@
     position:relative;
     list-style: none;
 }
-
+ 
 .menu ul li a{
     text-decoration: none;
     font-size: 24px;
@@ -112,4 +115,7 @@
     right: 200px;
     z-index: -10;
 }
+ 
+ 
+ 
 
